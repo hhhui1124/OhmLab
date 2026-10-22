@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b1018">
+<title>MaxPower Lab｜最大功率傳輸實驗室</title>
+<style>
+:root{color-scheme:dark;--bg:#0b1018;--card:#141c27;--card2:#101721;--line:#2a384a;--text:#eef4fc;--muted:#9aa9bc;--cyan:#5ee7dc;--blue:#80aaff;--orange:#ffbd69;--green:#8ce0ac;--red:#ff8493}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 78% -10%,#1b3044 0,transparent 42%),var(--bg);color:var(--text);font:16px/1.55 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}button,input,select{font:inherit}button{cursor:pointer}.wrap{max-width:1160px;margin:auto;padding:24px 24px 52px}.top{display:flex;justify-content:space-between;align-items:center;margin:4px 0 50px}.brand{display:flex;align-items:center;gap:12px;font-weight:800}.logo{width:40px;height:40px;border-radius:13px;background:linear-gradient(135deg,#65ead5,#80aaff);display:grid;place-items:center;color:#10202b;font-size:20px;font-weight:900}.top-note{font-size:13px;color:var(--muted)}.hero{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:25px}.eyebrow{color:var(--cyan);font-size:12px;text-transform:uppercase;font-weight:800;letter-spacing:2px}.hero h1{font-size:clamp(34px,5vw,58px);line-height:1.08;letter-spacing:-1.8px;margin:9px 0 12px}.hero p{margin:0;max-width:650px;color:var(--muted)}.hero-tag{border:1px solid var(--line);background:#131c28;border-radius:999px;padding:10px 14px;font-size:13px;white-space:nowrap;color:#dce9f7}.layout{display:grid;grid-template-columns:350px minmax(0,1fr);gap:18px}.card{border:1px solid var(--line);background:linear-gradient(160deg,#161f2b,#111721);border-radius:20px;padding:22px;box-shadow:0 14px 40px #0002}.card h2{font-size:17px;margin:0 0 16px}.controls{display:flex;flex-direction:column;gap:19px}.control-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;font-size:14px}.control-head label{color:#d8e2ef}.readout{color:var(--cyan);font-weight:760;font-variant-numeric:tabular-nums}.pair{display:grid;grid-template-columns:1fr 88px;gap:11px;align-items:center}.pair input[type=range]{width:100%;accent-color:var(--cyan)}.num{width:100%;padding:8px 9px;background:#0d131c;color:var(--text);border:1px solid #334155;border-radius:9px;text-align:right}.sub{font-size:12px;color:var(--muted);margin-top:4px}.reset{width:100%;border:1px solid #35465b;border-radius:11px;color:#cfdae8;background:transparent;padding:10px;font-weight:650}.reset:hover{background:#202b39}.hint{border-top:1px solid var(--line);padding-top:13px;color:var(--muted);font-size:12px}.hint strong{color:#e7effa}.lab{display:grid;grid-template-rows:auto auto 1fr;gap:13px}.head{display:flex;align-items:center;justify-content:space-between}.live{display:flex;align-items:center;gap:7px;color:var(--green);font-size:12px}.live:before{content:"";width:7px;height:7px;background:var(--green);border-radius:50%;box-shadow:0 0 10px #8ce0ac}.diagram{min-height:220px;background:linear-gradient(180deg,#0c131d,#101722);border:1px solid #273447;border-radius:15px;display:grid;place-items:center;padding:8px;overflow:hidden}.diagram svg{width:100%;max-width:650px;height:210px}.wire{stroke:#8194aa;stroke-width:4;fill:none;stroke-linecap:round;stroke-linejoin:round}.battery{stroke:var(--orange);stroke-width:4;stroke-linecap:round}.resistor{fill:#1d2b3b;stroke:var(--cyan);stroke-width:3;rx:8}.label{fill:#e9f3ff;font-size:15px;font-family:system-ui,sans-serif}.small{fill:#93a6bc;font-size:12px;font-family:system-ui,sans-serif}.flow{stroke:var(--orange);stroke-width:3;fill:none;stroke-dasharray:6 9;animation:flow 1s linear infinite}@keyframes flow{to{stroke-dashoffset:-30}}.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.metric{background:#111925;border:1px solid #29374a;border-radius:13px;padding:13px}.metric .name{font-size:12px;color:var(--muted)}.metric .value{font-size:22px;font-weight:800;margin-top:3px;font-variant-numeric:tabular-nums}.metric .value small{font-size:12px;color:var(--muted);font-weight:600}.metric.primary{border-color:#376258;background:linear-gradient(140deg,#14251f,#111925)}.grid-bottom{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}.chart-wrap{height:235px;background:#0d141e;border:1px solid var(--line);border-radius:13px;padding:8px}.chart-wrap svg{width:100%;height:100%;overflow:visible}.chart-grid{stroke:#293647;stroke-width:1}.chart-line{fill:none;stroke:var(--cyan);stroke-width:3;stroke-linecap:round;stroke-linejoin:round}.chart-fill{fill:url(#fillGrad);opacity:.28}.chart-marker{stroke:var(--orange);stroke-width:2;stroke-dasharray:5 5}.chart-dot{fill:var(--orange);stroke:#101721;stroke-width:3}.chart-text{fill:#9aacc0;font-size:11px;font-family:system-ui,sans-serif}.chart-caption{display:flex;justify-content:space-between;gap:10px;margin-top:9px;color:var(--muted);font-size:12px}.lesson p,.quiz-intro{font-size:14px;color:var(--muted);margin:0 0 13px}.formula{background:#0d141e;border:1px solid var(--line);border-radius:12px;padding:12px 14px;color:#dce9f7;font:14px/1.85 ui-monospace,SFMono-Regular,Consolas,monospace}.formula b{color:var(--cyan)}.quiz{display:flex;flex-direction:column;gap:11px}.quiz-intro{font-size:13px;margin:-8px 0 0}.question{background:#0d141e;border:1px solid var(--line);border-radius:12px;padding:12px}.qtitle{font-size:14px;font-weight:650;margin-bottom:8px}.quizrow{display:flex;gap:8px}.quizrow input,.quizrow select{min-width:0;flex:1;background:#090f17;color:var(--text);border:1px solid #35465b;border-radius:9px;padding:9px}.check{border:0;border-radius:10px;padding:11px 14px;background:linear-gradient(135deg,#62e3d3,#8bb5ff);color:#0c1722;font-weight:800}.feedback{min-height:20px;font-size:13px}.good{color:var(--green)}.bad{color:var(--red)}.answer{font-size:12px;color:var(--muted)}footer{display:flex;justify-content:space-between;gap:15px;margin-top:24px;padding-top:15px;border-top:1px solid #222e3c;color:#78889d;font-size:12px}
+@media(max-width:850px){.layout{grid-template-columns:1fr}.controls{display:grid;grid-template-columns:1fr 1fr;gap:15px 20px}.controls h2,.reset,.hint{grid-column:1/-1}.top{margin-bottom:36px}}
+@media(max-width:560px){.wrap{padding:16px 14px 38px}.top{margin-bottom:30px}.top-note{display:none}.hero{display:block}.hero-tag{display:inline-block;margin-top:16px}.controls{grid-template-columns:1fr}.controls h2,.reset,.hint{grid-column:auto}.grid-bottom{grid-template-columns:1fr}.metrics{grid-template-columns:1fr 1fr}.metric.primary{grid-column:1/-1}.card{padding:17px}.diagram{min-height:200px}.diagram svg{height:190px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top"><div class="brand"><div class="logo">P</div><span>MaxPower Lab</span></div><div class="top-note">互動式電路學習實驗室</div></header>
+<main>
+<section class="hero"><div><div class="eyebrow">Thevenin · Load Matching</div><h1>找到功率的<span style="color:var(--cyan)">最大值。</span></h1><p>調整電源的 Thevenin 等效電壓、內阻與負載電阻，觀察負載功率如何改變。試著讓負載電阻等於內阻，看看會發生什麼事。</p></div><div class="hero-tag">⚡ 最大功率傳輸定理</div></section>
+<section class="layout" aria-label="最大功率傳輸模擬器">
+<div class="card"><h2>設定電路參數</h2><div class="controls">
+<div><div class="control-head"><label for="vRange">Thevenin 電壓 Vₜₕ</label><span class="readout"><span id="vText">12.0</span><span class="sub"> V</span></span></div><div class="pair"><input id="vRange" type="range" min="1" max="24" step="0.5" value="12" aria-label="Thevenin電壓滑桿"><input id="vInput" class="num" type="number" min="1" max="24" step="0.5" value="12" aria-label="Thevenin電壓數值"></div><div class="sub">可調範圍 1–24 V</div></div>
+<div><div class="control-head"><label for="rtRange">Thevenin 內阻 Rₜₕ</label><span class="readout"><span id="rtText">100</span><span class="sub"> Ω</span></span></div><div class="pair"><input id="rtRange" type="range" min="10" max="1000" step="10" value="100" aria-label="Thevenin內阻滑桿"><input id="rtInput" class="num" type="number" min="10" max="1000" step="1" value="100" aria-label="Thevenin內阻數值"></div><div class="sub">可調範圍 10–1,000 Ω</div></div>
+<div><div class="control-head"><label for="rlRange">負載電阻 Rₗ</label><span class="readout"><span id="rlText">100</span><span class="sub"> Ω</span></span></div><div class="pair"><input id="rlRange" type="range" min="10" max="1000" step="10" value="100" aria-label="負載電阻滑桿"><input id="rlInput" class="num" type="number" min="10" max="1000" step="1" value="100" aria-label="負載電阻數值"></div><div class="sub">拖動滑桿尋找最大功率點</div></div>
+<button class="reset" id="resetBtn" type="button">↺　恢復初始設定</button>
+<div class="hint"><strong>最大功率傳輸定理</strong><br>當負載電阻 Rₗ 等於 Thevenin 內阻 Rₜₕ 時，負載可獲得最大功率。</div>
+</div></div>
+<div class="card lab"><div class="head"><h2>Thevenin 等效電路</h2><div class="live">即時更新中</div></div><div class="diagram"><svg id="circuit" viewBox="0 0 640 220" role="img" aria-label="Thevenin電壓源、內阻與負載電阻串聯電路圖"></svg></div>
+<div><div class="metrics" aria-live="polite">
+<div class="metric"><div class="name">電路電流 I</div><div class="value"><span id="iValue">0.0600</span> <small>A</small></div></div>
+<div class="metric"><div class="name">負載功率 Pₗ</div><div class="value"><span id="pValue">0.3600</span> <small>W</small></div></div>
+<div class="metric primary"><div class="name">理論最大功率 Pₘₐₓ</div><div class="value"><span id="pmaxValue">0.3600</span> <small>W</small></div></div>
+</div><div id="status" class="sub" style="margin-top:9px">現在 Rₗ = Rₜₕ，負載正好處於最大功率點。</div></div></div>
+</section>
+<section class="grid-bottom">
+<article class="card"><h2>負載功率曲線</h2><p class="quiz-intro">橫軸是負載電阻 Rₗ，縱軸是負載功率 Pₗ。橘色虛線標示目前負載位置。</p><div class="chart-wrap"><svg id="chart" viewBox="0 0 520 220" role="img" aria-label="負載功率對負載電阻曲線"></svg></div><div class="chart-caption"><span id="chartCurrent">目前負載：100 Ω</span><span id="chartPeak">最大值：Rₗ = 100 Ω</span></div></article>
+<article class="card lesson"><h2>公式與觀念</h2><p>把原本較複雜的線性電路，從負載端看進去，可化成一個等效電壓源 Vₜₕ 串聯內阻 Rₜₕ，再接上負載 Rₗ。</p><div class="formula"><b>電流</b>　I = Vₜₕ ÷ (Rₜₕ + Rₗ)<br><b>負載功率</b>　Pₗ = I²Rₗ<br><b>最大功率條件</b>　Rₗ = Rₜₕ<br><b>最大功率</b>　Pₘₐₓ = Vₜₕ² ÷ (4Rₜₕ)</div></article>
+<article class="card quiz"><h2>🧠 快速測驗</h2><div class="quiz-intro">依照目前設定計算，答案可以輸入小數。</div>
+<div class="question"><div class="qtitle">1. 目前負載電阻 Rₗ 上的功率是多少？</div><div class="quizrow"><input id="ansP" type="number" min="0" step="any" placeholder="輸入功率"><select id="unitP"><option value="W">W</option><option value="mW">mW</option></select></div></div>
+<div class="question"><div class="qtitle">2. 要達到最大功率，Rₗ 應該設為多少？</div><div class="quizrow"><input id="ansR" type="number" min="0" step="any" placeholder="輸入電阻"><select id="unitR"><option value="ohm">Ω</option><option value="kohm">kΩ</option></select></div></div>
+<div class="question"><div class="qtitle">3. 最大功率傳輸時，負載電阻與內阻的關係是：</div><select id="ansConcept"><option value="">請選擇</option><option value="equal">Rₗ = Rₜₕ</option><option value="twice">Rₗ = 2Rₜₕ</option><option value="half">Rₗ = Rₜₕ ÷ 2</option></select></div>
+<button id="checkBtn" class="check" type="button">檢查答案</button><div id="feedback" class="feedback" aria-live="polite"></div><div id="answers" class="answer"></div></article>
+<article class="card lesson"><h2>怎麼讀這個實驗？</h2><p>先記住：負載拿到的功率會隨 Rₗ 改變。當 Rₗ 太小或太大時，功率都會低於峰值；拖動負載電阻，讓橘色標記移到曲線最高點。</p><div class="formula">左側滑桿 → 改變電路條件<br>橘色虛線 → 目前 Rₗ 的位置<br>曲線最高點 → 最大負載功率</div></article>
+</section>
+</main>
+<footer><span>MaxPower Lab · 電路學互動學習</span><span>依據 Thevenin 等效與最大功率傳輸定理</span></footer>
+</div>
+<script>
+const initial={v:12,rt:100,rl:100};
+const s={...initial};
+const $=id=>document.getElementById(id);
+const clamp=(x,a,b)=>Math.min(b,Math.max(a,Number(x)||a));
+const fmt=(x,n)=>Number(x).toFixed(n);
+function metrics(){const i=s.v/(s.rt+s.rl);return{i:i,p:i*i*s.rl,pmax:s.v*s.v/(4*s.rt)}}
+function drawCircuit(){
+ $('circuit').innerHTML='<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 z" fill="#ffbd69"/></marker></defs>'+
+ '<path class="wire" d="M100 52 H225 M269 52 H365 M409 52 H520 V170 H100 V52"/>'+
+ '<path class="wire" d="M100 52 V83 M100 137 V170"/><path class="battery" d="M82 90 V130 M100 83 V137"/>'+
+ '<rect class="resistor" x="225" y="34" width="44" height="36"/><rect class="resistor" x="365" y="34" width="44" height="36"/>'+
+ '<path class="flow" marker-end="url(#arrow)" d="M286 52 H336"/>'+
+ '<text class="label" x="232" y="58">Rₜₕ</text><text class="small" x="219" y="94">'+s.rt+' Ω</text>'+
+ '<text class="label" x="376" y="58">Rₗ</text><text class="small" x="360" y="94">'+s.rl+' Ω</text>'+
+ '<text class="label" x="18" y="119">Vₜₕ</text><text class="small" x="19" y="139">'+fmt(s.v,1)+' V</text>'+
+ '<text class="small" x="276" y="145">I = '+fmt(s.v/(s.rt+s.rl),4)+' A</text>'+
+ '<text class="small" x="200" y="201">Thevenin 等效電壓源串聯內阻與負載</text>';
+}
+function drawChart(){
+ const c= $('chart'),W=520,H=220,L=52,R=15,T=12,B=34,pw=W-L-R,ph=H-T-B;
+ const maxR=Math.max(1000,s.rt*2),maxP=s.v*s.v/(4*s.rt);
+ const pts=[];
+ for(let k=0;k<=100;k++){const rl=10+(maxR-10)*k/100;const i=s.v/(s.rt+rl);const p=i*i*rl;pts.push({x:L+rl/maxR*pw,y:T+(1-p/maxP)*ph});}
+ const line=pts.map((p,i)=>(i?'L':'M')+p.x.toFixed(1)+' '+p.y.toFixed(1)).join(' ');
+ const fill=line+' L '+pts[pts.length-1].x.toFixed(1)+' '+(T+ph)+' L '+pts[0].x.toFixed(1)+' '+(T+ph)+' Z';
+ const xNow=L+Math.min(s.rl,maxR)/maxR*pw,cur=metrics(),yNow=T+(1-cur.p/maxP)*ph;
+ let grid='<defs><linearGradient id="fillGrad" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#5ee7dc"/><stop offset="1" stop-color="#5ee7dc" stop-opacity="0"/></linearGradient></defs>';
+ for(let n=0;n<=4;n++){const y=T+n*ph/4;grid+='<line class="chart-grid" x1="'+L+'" y1="'+y+'" x2="'+(W-R)+'" y2="'+y+'"/><text class="chart-text" x="5" y="'+(y+4)+'">'+fmt(maxP*(1-n/4),2)+' W</text>';}
+ grid+='<line class="chart-grid" x1="'+L+'" y1="'+T+'" x2="'+L+'" y2="'+(T+ph)+'"/><line class="chart-grid" x1="'+L+'" y1="'+(T+ph)+'" x2="'+(W-R)+'" y2="'+(T+ph)+'"/>';
+ grid+='<text class="chart-text" x="'+L+'" y="'+(H-7)+'">0 Ω</text><text class="chart-text" x="'+(W-R-45)+'" y="'+(H-7)+'">'+Math.round(maxR)+' Ω</text>';
+ c.innerHTML=grid+'<path class="chart-fill" d="'+fill+'"/><path class="chart-line" d="'+line+'"/><line class="chart-marker" x1="'+xNow+'" y1="'+T+'" x2="'+xNow+'" y2="'+(T+ph)+'"/><circle class="chart-dot" cx="'+xNow+'" cy="'+yNow+'" r="6"/><text class="chart-text" x="'+Math.min(W-90,xNow+8)+'" y="'+Math.max(T+12,yNow-8)+'">目前</text>';
+ $('chartCurrent').textContent='目前負載：'+s.rl+' Ω';
+ $('chartPeak').textContent='最大值：Rₗ = '+s.rt+' Ω';
+}
+function update(){
+ const m=metrics();
+ $('vText').textContent=fmt(s.v,1);$('rtText').textContent=s.rt;$('rlText').textContent=s.rl;
+ $('iValue').textContent=fmt(m.i,4);$('pValue').textContent=fmt(m.p,4);$('pmaxValue').textContent=fmt(m.pmax,4);
+ const diff=Math.abs(s.rl-s.rt)/s.rt;
+ $('status').textContent=diff<.01?'現在 Rₗ ≈ Rₜₕ，負載正好處於最大功率點。':'目前與最大功率點的差距：'+fmt(diff*100,1)+'%；把 Rₗ 調到 '+s.rt+' Ω 可達最大功率。';
+ drawCircuit();drawChart();$('feedback').textContent='';$('feedback').className='feedback';$('answers').textContent='';
+}
+function setValue(key,val){
+ const config={v:{min:1,max:24},rt:{min:10,max:1000},rl:{min:10,max:1000}}[key];
+ s[key]=clamp(val,config.min,config.max);
+ const range=$(key+'Range'),input=$(key+'Input');input.value=s[key];
+ if(s[key]>=Number(range.min)&&s[key]<=Number(range.max))range.value=s[key];
+ update();
+}
+[['v','vRange','vInput'],['rt','rtRange','rtInput'],['rl','rlRange','rlInput']].forEach(([k,r,i])=>{
+ $(r).addEventListener('input',e=>setValue(k,e.target.value));
+ $(i).addEventListener('input',e=>{if(e.target.value!=='')setValue(k,e.target.value)});
+});
+$('resetBtn').addEventListener('click',()=>{Object.assign(s,initial);['v','rt','rl'].forEach(k=>{$(k+'Range').value=s[k];$(k+'Input').value=s[k]});update()});
+$('checkBtn').addEventListener('click',()=>{
+ const m=metrics(),pAns=Number($('ansP').value)*($('unitP').value==='mW'?.001:1),rAns=Number($('ansR').value)*($('unitR').value==='kohm'?1000:1);
+ const okP=$('ansP').value!==''&&Math.abs(pAns-m.p)<=Math.max(.00005,m.p*.02);
+ const okR=$('ansR').value!==''&&Math.abs(rAns-s.rt)<=Math.max(.1,s.rt*.01);
+ const okC=$('ansConcept').value==='equal';const score=[okP,okR,okC].filter(Boolean).length;
+ $('feedback').className='feedback '+(score===3?'good':'bad');
+ $('feedback').textContent=score===3?'全部答對！你找到了最大功率傳輸條件。':'目前答對 '+score+'/3 題。再看公式與即時數值，修改後可重新檢查。';
+ $('answers').textContent='參考答案：目前 Pₗ = '+fmt(m.p,4)+' W；最大功率時 Rₗ = '+s.rt+' Ω；Rₗ = Rₜₕ。';
+});
+update();
+</script>
+</body>
+</html>
